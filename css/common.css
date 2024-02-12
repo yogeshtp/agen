@@ -1,0 +1,102 @@
+@import url("./style.css");
+@import url("./services.css");
+@import url("./portfolio.css");
+@import url("./contact.css");
+
+@font-face {
+  font-family: WorkSansMedium;
+  src: url(../assets/fonts/Work_Sans/static/WorkSans-Medium.ttf);
+}
+@font-face {
+  font-family: WorkSansRegualar;
+  src: url(../assets/fonts/Work_Sans/static/WorkSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: CrimsonRegular;
+  src: url(../assets/fonts/Crimson_Text/CrimsonText-Regular.ttf);
+}
+@font-face {
+  font-family: CrimsonBold;
+  src: url(../assets/fonts/Crimson_Text/CrimsonText-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+:root {
+  --primary-bg: #74c69d;
+  --secondary-bg: #ffffff;
+  --primary-btn-bg: #000000;
+  --seconday-btn-bg: #000000;
+
+  --primary-font: #000;
+  --secondary-font: #fff;
+}
+
+.header,
+.footer {
+  background-color: var(--primary-bg);
+}
+button {
+  width: 170px;
+  padding: 13px 0px 10px;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    margin: 0px 20px;
+  }
+}
+
+/*----------------------------------------------------
+                 footer
+    --------------------------------------------------*/
+
+.footer {
+  margin-top: 54px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 53px 0px;
+  flex-wrap: wrap;
+}
+.footer__imges {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.footer__copyright--content {
+  color: var(--secondary-font);
+  font-size: 20px;
+  line-height: 25px;
+  font-family: WorkSansRegular;
+}
+
+@media only screen and (max-width: 480px) {
+  .footer .container {
+    gap: 20px;
+    justify-content: center;
+    padding: 31px 0px;
+  }
+}
+
+
+
+
