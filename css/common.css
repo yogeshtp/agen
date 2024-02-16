@@ -63,6 +63,9 @@ button {
     margin: 0px 20px;
   }
 }
+.nav__logo {
+  cursor: pointer;
+}
 
 /*----------------------------------------------------
                  footer
@@ -97,6 +100,107 @@ button {
   }
 }
 
+/*----------------------------------------------------
+                  header
+--------------------------------------------------*/
+.header .container {
+  padding-top: 35px;
+  padding-bottom: 38px;
+}
+.header__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.nav__logo {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.nav__logo--img {
+  width: 70px;
+  height: 40px;
+}
+.nav__logo--name {
+  font-size: 40px;
+  line-height: 50px;
+  font-family: WorkSansMedium;
+  color: var(--secondary-font);
+}
 
+.nav__elements {
+  display: flex;
+  gap: 30px;
+}
 
+.nav__elements--links {
+  text-decoration: none;
+  color: var(--secondary-font);
+  font-family: WorkSansRegualar;
+  font-size: 20px;
+  line-height: 25px;
+}
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  z-index: 999;
+}
+.hamburger .close-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
 
+@media screen and (max-width: 767px) {
+  .header .container {
+    padding: 21px 0px;
+  }
+  .nav__logo {
+    gap: 10px;
+  }
+  .nav__logo--img {
+    width: 45px;
+  }
+  .nav__logo--name {
+    font-size: 30px;
+    line-height: 37.5px;
+  }
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+  .nav__elements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-bg);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    z-index: 10;
+  }
+  .nav__elements.show-nav {
+    display: flex;
+  }
+  .nav__elements--links {
+    margin-bottom: 20px;
+  }
+
+  .hamburger .close-icon {
+    display: block;
+  }
+  .hamburger .hamburger-icon {
+    display: none;
+  }
+  .close-icon {
+    display: none !important;
+  }
+  .clicked {
+    display: block;
+    z-index: 10;
+  }
+}
